@@ -15,34 +15,75 @@
     If such an L exists, then L is called the limit of the fn f as x tends to infinity and we write $\lim_{x \to \infty} f(x) = L$
 
 \subsection*{Def 3.1.2}
-
+    If $\lim_{x \to \infty} f (x) = L$, then the line $y = L$ is called a horizontal asymptote for the function f.
 \subsection*{Thm 3.1.6}
+    Suppose that $D \subseteq \R$ is an unbounded above domain of the function f ; that is, $D$ contains arbitrarily large values. Then, $\lim_{x \to \infty} f (x) = L$ iff for every sequence $\{ x_n \}$ in $D$ that diverges to plus infinity, that is, $\lim_{n \to \infty} x_n = \infty$, the sequence $\{ f (x_n) \}$ converges to $L$.
 
 \subsection*{Thm 3.1.7}
+    Suppose that the functions f, g, and h are defined on $D \subseteq \R$, which is unbounded above, with $\lim_{x \to \infty} f (x) = A, \lim_{x \to \infty} g (x) = B$, and $\lim_{x \to \infty}  h (x) = C$. Then
+    \begin{enumerate}[(a)]
+        \item $\lim_{x \to \infty} f(x)$ is unique
+        \item f must be eventually bounded above and below
+        \item $\lim_{x \to \infty} [f(x) - A] = 0$
+        \item $\lim_{x \to \infty} |f(x)| = | \lim_{x \to \infty} f(x)| = |A|$
+        \item $\lim_{x \to \infty} ( f \pm g )(x) = \lim_{x \to \infty} f(x) \pm \lim_{x \to \infty} g(x) = A \pm B$
+        \item $\lim_{x \to \infty} ( f g )(x) = [ \lim_{x \to \infty} f(x) ] [ \lim_{x \to \infty} g(x) ]= A B$
+        \item $\lim_{x \to \infty} [f(x)]^{n} = [\lim_{x \to \infty} f(x)]^{n} = A^{n}, \forall n \in \N$
+	\item $\lim_{x \to \infty} \left( f/g \right) (x) = \dfrac{A}{B} \ if B \not= 0$
+	\item $\lim_{x \to \infty} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x \to \infty} f(x)} = \sqrt[n]{A}$ if $A \ge 0$ \& $f(x) \ge 0 \ \forall x \in D$, with $n \in \N$
+	\item $A \le B \ if \ f(x) \le g(x)$ eventually for $x \in D$
+	\item $A \le B \le C$ if $f (x) \le g (x) \le h (x)$ eventually for $x \in D$. This property is called the sandwich (or squeeze) theorem
+ \end{enumerate}
 
 \subsection*{Thm 3.1.8}
+    If the function $f$ is defined on an unbounded above domain $D \subseteq \R$ and is eventually monotone and eventually bounded, then $\lim_{x \to \infty} f (x)$ is finite.
 
 \subsection*{Def 3.1.9}
+    Let f be a function with domain $D \subseteq \R$, which contains arbitrarily large values. We say that $f$ tends to plus infinity as x tends to $+ \infty$ iff for any real $K > 0$, there exists a real number $M > 0$ such that $f (x) > K$ provided that $x \ge M$ and $x \in  D$. Whenever this is the case, we write $\lim_{x \to \infty} f (x) = +\infty$
 
 \subsection*{Def 3.1.10}
+    Let $f$ be a function with domain $D \subseteq \R$, which contains arbitrarily large negative values. Then $\lim_{x \to -\infty} f (x) = L$ iff for every $\epsilon > 0$ there exists a real number $M > 0$ such that $|f (x) - L| < \epsilon$ if $x \le M$ and $x \in D$
 
 \subsection*{Def 3.2.1}
+    Suppose that a function $f : D \to \R$, and suppose that $a$ is an accumulation point of $D$. The function $f$ has a limit as $x$ approaches (or as $x$ tends to) $a$ iff there exists a real number $L$ such that for every $\epsilon > 0$ there exists a real number $\delta > 0$ such that
+    \[
+    |f(x) - L| < \epsilon \text{ provided that } 0 < |x - a| < \delta \text{ and } x \in D
+    \] 
+    write $\lim_{x \to a} f(x) = L$
 
 \subsection*{Thm 3.2.5}
+    Suppose that functions $f, g, h : D \to \R$, with $D \subseteq \R$, $a$ is an accumulation point of $D$,$\lim_{x \to a} f(x) = A$,$\lim_{x \to a} g (x) = B$, and $\lim_{x \to a} h (x) = C$. Then all of the conclusions for Theorem 3.1.7 are true with $\infty$ replaced by $a$ and with "eventually" replaced by "near $x = a$."
 
 \subsection*{Thm 3.2.6}
+    Let the function $f$ be defined on some deleted neighborhood $D$ of the real number $a$. The following two statements are equivalent.
+    \begin{enumerate}[(a)]
+        \item $\lim_{x \to a} f(x) = L$ 
+	\item For every sequence $ \{ x_n \} $ converging to $x = a$, with $x_n \in D$ and $x_n \not= a$ eventually, the sequence $\{ f(x_n) \} $ converges to $L$
+    \end{enumerate}
 
 \subsection*{Def 3.2.12}
-
+    Suppose that the function $f : D \to \R $ with $D$ a subset of $\R$ and $a$ an accumulation point of $D$. Then the function $f$ tends to plus infinity as $x$ approaches, tends to, $a$ iff for any given real number $K > 0$, there exists $\delta > 0$ such that $f (x) > K$, provided that $0 < |x - a| < \delta$ and $x \in D$. Write $\lim_{x \to a} f (x) = +\infty$
 \subsection*{Thm 3.2.14}
+    Let the functions $f$ and $g$ be defined on some deleted neighborhood  of $x = a$. If $\lim_{x \to a} f(x) = L > 0$ and $\lim_{x \to a} g(x) = + \infty$, then $\lim_{x \to a} (fg) (x) = + \infty$.
 
 \subsection*{Def 3.3.1}
+    Suppose that the function $f : D \to \R$, with $D$ a subset of $\R$ and $a$ an accumulation point of the set $D \cap (a, \infty) = \{x \in  D | x > a \}$ Then the function $f$ has a right-hand limit (limit from the right) as $x$ approaches, tends to, $a$ iff there exists a real number $L$ such that for every $\epsilon > 0$ there exists a positive real number $\delta > 0$ such that
+    \[
+    |f(x) - L| < \epsilon \text{ provided that } 0 < x - a < \delta \text{ and } x \in D 
+    \] 
+    we write $ \lim_{x \to a^{+}} f(x) = L$
 
 \subsection*{Def 3.3.2}
+Suppose that the function $f : D \to \R$, with $D$ a subset of and $a$ an accumulation point of $D \cap (a, \infty)$. Then the function $f$ tends to infinity as $x$ approaches, tends to, $a$ from the right iff for any given real number $K > 0$, there exists a positive $\delta> 0$ such that $f (x) > K$, provided that $0 < x - a < \delta$ and $x \in D$. We write $\lim_{x \to a^{+}} f(x) = +\infty$
 
 \subsection*{Def 3.3.4}
+    If the limit from the right or from the left at $x = a$ of a function $f$ is infinite, meaning $+\infty$or $-\infty$, then the line $x = a$ is called a vertical asymptote.
 
 \subsection*{Thm 3.3.7}
+    Let a function $f$ be defined for $x \in (0, a)$, with $a > 0$ a real number. If
+    \[
+    \lim_{x \to 0^{+}} f(x) \text{ or } \lim_{t \to \infty} f\left( \frac{1}{t} \right)
+    \] 
 
 \section*{Chapter 4}
 
