@@ -88,48 +88,95 @@ Suppose that the function $f : D \to \R$, with $D$ a subset of and $a$ an accumu
 \section*{Chapter 4}
 
 \subsection*{Def 4.1.1}
+    (Local) Suppose that a function $f : D \to \R$, with $D$ a subset of $\R$. Then $f$ is continuous at $a \in D$ iff for any given $\epsilon > 0$, there exists $\delta > 0$ such that $| f (x) - f (a) | < \epsilon$, provided that $|x - a| < \delta$ and $x \in D$.
 
 \subsection*{Def 4.1.2}
+    (Global) A function $f : D \to \R$ is continuous on a set $E \subseteq D$ iff $f$ is continuous at each point (value of $x$) in $E$. If $f$ is continuous at every point in its domain, $D$, we simply say that $f$ is continuous.
 
 \subsection*{Sequential Criterion for Continuity Thm}
+    Let $f:D \to \R$. $f$ is continuous at $A$ in domain $D$ iff for every seq $\{ a_n \} \subseteq D, \lim_{n \to \infty} a_n = A$, then seq $\lim_{n \to \infty} f(A_n) = f(A)$
 
 \subsection*{Def 4.1.6}
+    Suppose a function $f : D \to \R$ with $D \subseteq \R$. Then $f$ is right continuous at $a$, meaning that $f$ is continuous from the right at $a$ iff for any given $\epsilon > 0$ there exists $\delta > 0$ such that $| f (x) - f (a) | < \epsilon$, provided that $0 < x - a < \delta$ and $x \in D$.
 
 \subsection*{Thm 4.1.7}
+    Suppose that $D$ is the domain of $f$
+    \begin{enumerate}[(a)]
+	\item If $f$ is continuous at $a$, then there exists $\delta > 0$ such that $f$ is bounded on the set $(a - \delta, a + \delta) \cap D$.
+	\item If $f$ is right continuous at $a$, then there exists $\delta > 0$ such that $f$ is bounded on the set $[a, a + \delta) \cap D$.
+	\item If $f$ is left continuous at $a$, then there exists $\delta > 0$ such that $f$ is bounded on the set $(a - \delta, a] \cap D$.
+	\item If $f$ is continuous at $a$, and $f(a) > 0$, then there exists $\delta > 0$ such that $f(x) > \frac{1}{2} f(a) \forall x \in (a - \delta, a + \delta) \cap D$, or $f(a) < 0 f(x) < \frac{1}{2} f(a)	.$
+	\item Suppose that $D = (a, b)$, f is continuous at $c \in  D$, and $f (c) > 0$. Then there exists a neighborhood $N_{\epsilon}$ of $c$ such that $f (x) > 0 \  \forall x \in N_{\epsilon} \cap (a, b)$.
 
+    \end{enumerate}
 \subsection*{Thm 4.1.8}
+    Suppose that functions $f, g : D \to \R$ with $D \subset \R$ are continuous at $a$. Then,
+    \begin{enumerate}[(a)]
+        \item $f \pm g$ are continuous at $ a$
+	\item $fg$ is continuous at $a$ 
+	\item $ \dfrac{f}{g} $ is continuous at $a$, provided that $g(a) \not= 0$
+    \end{enumerate}
 
 \subsection*{Thm 4.1.9}
+    Consider functions $f : A \to \R$ and $g : B \to \R$ with $A, B \subseteq \R$ such that $f (A) \subseteq B$. If $f$ is continuous at some $x = a \in A$ and $g$ is continuous at $b = f (a) \in B$, then the function $g \circ f$ is continuous at $x = a$
 
 \subsection*{Def 4.2.1}
+    A function $g : E \to \R$ with $E \subseteq R$ is an extension of the function $f:D \to \R$ provided that $D \subset E$ and $f (x) = g(x) \ \forall x \in D$. If $g$ is continuous, then $g$ is called a continuous extension of $f$.
 
 \subsection*{Def 4.2.3}
+    A function $f : D \to \R$ with $D \subseteq \R$ and $a$ an accumulation point of $D$ has a removable discontinuity at $x = a$ if either
+    \begin{enumerate}[(a)]
+        \item $a \not \in D$ and $\lim_{x \to a} f(x)$ is finite, or
+        \item $a \not \in D$ and $\lim_{x \to a} f(x) = L \not= f(a)$
+    \end{enumerate}
 
 \subsection*{Def 4.2.5}
+    Suppose that fo ra function $f : D \to \R$, one of the following three conditions is satisfied 
+    \begin{enumerate}[(a)]
+        \item $\lim_{x \to a^{+}} f(x) = L$ and $\lim_{x \to a^{-}} f(x) = M$ 
+	\item $a$ is not an accumulation point of $D \cap (a, \infty), a \in D$ and $\lim_{x \to a^{-}} f(x) = M$. In this case, $L$ will denote the value of $f(a)$
+	\item $a$ is not an accumulation point of $D \cap (- \infty, a), a \in D$ and $\lim_{x \to a^{+}} f(x) = L$. In this case, $M$ will denote the value of $f(a)$
+    \end{enumerate}
 
 \subsection*{Def 4.2.7}
+    The function $f$ is piecewise continuous on $D \subseteq \R$ iff there exists finitely many points $x_1, x_2, \ldots, x_{n}$, such that 
+    \begin{enumerate}[(a)]
+        \item $f$ is continuous on $D$ except at $x_1, x_2, \ldots, x_{n}$, and
+	\item $f$ has simple discontinuities at $x_1, x_2, \ldots, x_{n}$
+    \end{enumerate}
 
 \subsection*{Def 4.3.1}
+    A set $E \subseteq \R$ is said to be closed iff every accumulation point of $E$ is in $E$.
 
 \subsection*{Def 4.3.2}
+    A set $E \subseteq \R$ is said to be open iff for each $x \in E$ there exists a neighborhood $I$ of $x$ such that $I$ is entirely contained in $E$.
 
 \subsection*{Thm 4.3.3}
+A set $E \subseteq \R$ is closed iff $\R \backslash E$ is open.
 
 \subsection*{Thm 4.3.4}
+    If a function $f$ is continuous on a closed and bounded interval $[a, b]$, then $f$ is bounded on $[a, b]$.
 
 \subsection*{Thm 4.3.5}
+    (Extreme Value Theorem) If $f$ is a continuous function on an interval $[a, b]$, then $f$ attains its maximum and minimum values on $[a , b]$.
 
 \subsection*{Thm 4.3.6}
+    (Bolzano's Intermediate Value Theorem) If a function $f$ is continuous on $[a, b]$ and if $k$ is a real number between $f(a)$ and $f(b)$, then there exists a real number $c \in  (a, b)$ such that $f(c) = k$.
 
 \subsection*{Def 4.3.7}
+    A function $f : D \to \R$ with $D \subseteq \R$ satisfies the intermediate value property on $D$ iff for every $x_1, x_2 \in D$ with $x_1 < x_2$ and any real constant $k$ between $f (x_1)$ and $f (x_2)$ there exists at least one constant $c \in (x_1, x_2)$ such that $f (c) = k$.
 
 \subsection*{Cor 4.3.8}
+Any polynomial of odd degree has at least one real root.
 
 \subsection*{Cor 4.3.9}
+If a function $f : [a, b] \to \R$ is nonconstant and continuous, then the range of $f$ is an interval $[c, d]$ with $c, d \in \R$.
 
 \subsection*{Thm 4.3.10}
+    (Brouwer's Fixed-Point Theorem) If a function $f : [a, b] \to [a, b]$, is continuous, then $f$ has at least one fixed point; that is, there exists at least one real number $p \in [a, b]$ such that $f (p) = p$.
 
 \subsection*{Thm 4.3.11}
+    If a function $f : D \to \R$ is a continuous injection and $D = [a, b]$, then $f^{-1} : R_f \to D$ is continuous.
 
 \subsection*{Def 4.4.2}
 
