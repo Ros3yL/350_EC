@@ -179,17 +179,29 @@ If a function $f : [a, b] \to \R$ is nonconstant and continuous, then the range 
     If a function $f : D \to \R$ is a continuous injection and $D = [a, b]$, then $f^{-1} : R_f \to D$ is continuous.
 
 \subsection*{Def 4.4.2}
+    A fn $f : D \to \R$ is continuous on a set $E \subseteq D$ iff $f$ is continuous @ each pt. in $E$
 
 \subsection*{Def 4.4.1}
+$f$ is continuous @ $a \in D$, iff given $\epsilon > 0, \exists \delta > 0$ s.t.  $| f(x) - f(a) | < \epsilon$ provided that $|x - a| < \delta$ \& $x \in D$
 
 \subsection*{Def 4.4.3}
+    A fn $f : D \to \R$ is uniformly continuous on a set $E \subseteq D$ iff given $\epsilon > 0, \exists \delta > 0$ s.t. on $| f(x) - f(t) | < \epsilon \ \forall x, t \in  E$ satisfying $|x - t| < \delta$
 
 \subsection*{Thm 4.4.6}
+If $D \subseteq \R$ is a closed \& a bounded set, \& a fn $f : D \to \R$ is continuous, then $f$ is uniformly continuous.
 
 \subsection*{Def 4.4.6}
+    A fn $f : D \to \R$ w\ $F\subseteq \R$ is a Lipschitz fn iff $\exists L > 0$ s.t. 
+    \[
+    | f(x) - f(t) | \le L | x - t | \ \forall x, t \in D
+    \] 
 
 \subsection*{Thm 4.4.11}
+    If a fn is a Lipschitz fn, then it is uniformly continuous
 
-\subsection*{Thm}
+\subsection*{Thm : Uniform Continuous to Cauchy}
+If $f : D \to \R$ is uniformly continuous \& if $ \{ x_{n} \} $ is a cauchy sequence in $D$, then $\{ f(x_{n}) \} $ is a cauchy sequence in $\R$
+    
+
 \end{document}
 
